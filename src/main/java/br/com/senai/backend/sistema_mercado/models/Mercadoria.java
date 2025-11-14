@@ -1,7 +1,5 @@
 package br.com.senai.backend.sistema_mercado.models;
 
-import java.time.LocalDate;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -30,12 +28,12 @@ private String nome;
 
 
 @Column(name="cateoria")
-private LocalDate categoria;
+private String categoria;
 
         public Mercadoria() {
         }
 
-        public Mercadoria(LocalDate categoria, Integer id, String nome, double preco, int quantidade) {
+        public Mercadoria(String categoria, Integer id, String nome, double preco, int quantidade) {
             this.categoria = categoria;
             this.id = id;
             this.nome = nome;
@@ -75,11 +73,11 @@ private LocalDate categoria;
             this.nome = nome;
         }
 
-        public LocalDate getCategoria() {
+        public String getCategoria() {
             return categoria;
         }
 
-        public void setCategoria(LocalDate categoria) {
+        public void setCategoria(String categoria) {
             this.categoria = categoria;
         }
 

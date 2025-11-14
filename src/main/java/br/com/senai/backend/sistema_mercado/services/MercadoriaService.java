@@ -16,9 +16,9 @@ public Mercadoria cadastrar (Mercadoria mercadoria) {
 return mercadoriaRepository.save (mercadoria);
 
     }
+
 public Mercadoria recuperarPorId (Integer id) {
-
-return mercadoriaRepository.findById(id).get();
-
+    return mercadoriaRepository.findById(id).get();
+}
 
 }
